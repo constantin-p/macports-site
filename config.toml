@@ -1,4 +1,4 @@
-baseURL = "https://www.macports.org/"
+baseURL = "https://constantin-p.github.io/macports-site/"
 languageCode = "en-us"
 title = "The MacPorts Project"
 copyright = "Copyright © 2002–2019 [The MacPorts Project](https://www.macports.org/). All rights reserved."
