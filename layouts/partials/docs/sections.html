@@ -1,0 +1,20 @@
+<div class="doc-sections">
+  
+  {{ $sections := union .Sections .Pages }}
+  {{ range $sections.ByWeight }}
+
+    {{ $idPath := strings.TrimSuffix "/" (strings.TrimPrefix "/" (strings.TrimPrefix "/docs/" .RelPermalink )) }}
+    {{ $id := replace $idPath "/" "." }}
+
+    <a href="#{{ $id }}" class="h2">
+      <h2>{{ .Title }}</h2>
+      <span class="anchor-target" id="{{ $id }}"></span>
+    </a>
+
+    {{ .Content }}
+    {{ if (or .Sections .Pages) }}
+      {{ partial "docs/subsections.html" . }}
+    {{ end }}
+  {{ end }}
+
+</div>

@@ -1,0 +1,21 @@
+<ul class="nav-chapters">
+
+  {{ $chapters := union .Sections .Pages }}
+  {{ range $chapters.ByWeight }}
+
+    {{ $idPath := strings.TrimSuffix "/" (strings.TrimPrefix "/" (strings.TrimPrefix "/docs/" .RelPermalink )) }}
+    {{ $id := replace $idPath "/" "." }}
+
+    {{ if (or .Sections .Pages) }}
+      <li class="has-sublist">
+        <a href="#{{$id}}">{{ .Title }}</a>
+        {{ partial "docs/nav-sections.html" . }}
+      </li>
+    {{ else }}
+      <li>
+        <a href="#{{$id}}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  {{ end }}
+  
+</ul>

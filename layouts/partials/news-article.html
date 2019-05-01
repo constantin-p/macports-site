@@ -1,0 +1,9 @@
+<article>
+  <a href="{{ .RelPermalink }}" class="article-title">
+    {{ .Title }}
+  </a>
+
+  <p class="article-date">{{ .Date.Format .Site.Params.dateFormat }}</p>
+
+  {{ .Content }}
+</article>

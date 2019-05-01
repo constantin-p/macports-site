@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Git Install</title>
+
+  
+  <link rel="stylesheet" href="https://www.macports.org/css/main.css">
+
+</head>
+  <body>
+
+    
+
+  
+<header class="dark">
+  <nav class="container">
+
+    <a class="brand" href="/" title="The MacPorts Project">
+      
+        <img src="/assets/logo-inverse.svg" height="22" alt="Mac Ports">
+      
+    </a>
+
+    <label for="menu-toggle">Menu</label>
+    <input type="checkbox" id="menu-toggle">
+    <ul>
+      
+      
+        
+        <li class="">
+          
+            <a href="/getting-started/">Getting Started</a>
+          
+        </li>
+      
+        
+        <li class="active">
+          
+            <a href="/docs/">Documentation</a>
+          
+        </li>
+      
+        
+        <li class="">
+          
+            <a href="https://www.macports.org/ports.php">Available ports</a>
+          
+        </li>
+      
+        
+        <li class="">
+          
+            <a href="https://github.com/macports/macports-base/releases/tag/v2.5.4">Downloads</a>
+          
+        </li>
+      
+        
+        <li class="has-sublist ">
+          
+            <a role="button" tabindex="0">Support</a>
+            <div class="sublist">
+              <ul class="container">
+                
+                  <li class="">
+                    <a href="https://guide.macports.org/#project.tickets">Bug Reporting</a>
+                  </li>
+                
+                  <li class="">
+                    <a href="/support/contact-us/">Contact Us</a>
+                  </li>
+                
+                  <li class="">
+                    <a href="https://trac.macports.org/wiki/MacPortsDevelopers">Team</a>
+                  </li>
+                
+                  <li class="">
+                    <a href="https://trac.macports.org/wiki/FAQ">FAQ</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+        </li>
+      
+        
+        <li class="">
+          
+            <a href="/news/">News</a>
+          
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+
+  <main>
+    <div class="container">
+      <h1>Git Install</h1>
+      <p>If you installed MacPorts using the package installer, skip this section.</p>
+
+<p>There are times when some may want to run MacPorts from a version newer than the current stable release. Maybe there&rsquo;s a new feature that you&rsquo;d like to use, or it fixes an issue you&rsquo;ve encountered, or you just like to be on the cutting edge. These steps explain how to setup MacPorts for developers, using only Git to keep MacPorts up to date.</p>
+
+<p>Though a distinction is made between pre-release and release versions of MacPorts base, the ports collection supports no such distinction or versioning. The <a href="https://guide.macports.org/#using.port.selfupdate">selfupdate</a> command installs the latest ports tree, and updates MacPorts base to the latest released version.</p>
+
+<ol>
+<li><p>Check out MacPorts source</p>
+
+<p>Pick a location to store a working copy of the MacPorts code. For this example, <code class="docs-path">/opt/mports</code> will be used, but you can put the source anywhere. This example will create <code class="docs-path">/opt/mports/macports-base</code> containing everything needed for MacPorts.
+<pre class="docs-shell-in"><code>mkdir -p /opt/mports</code></pre>
+
+<pre class="docs-shell-in"><code>cd /opt/mports</code></pre>
+
+<pre class="docs-shell-in"><code>git clone https://github.com/macports/macports-base.git</code></pre>
+
+<pre class="docs-shell-in"><code>git checkout v2.5.4  # skip this if you want to use the development version</code></pre>
+</p></li>
+
+<li><p>Build and Install MacPorts</p>
+
+<p>MacPorts uses autoconf and makefiles for installation. These commands will build and install MacPorts to <code class="docs-path">/opt/local</code>. You can add <code class="docs-option">--prefix</code> to <code class="docs-path">./configure</code> to relocate MacPorts to another directory if needed.
+<pre class="docs-shell-in"><code>cd /opt/mports/macports-base</code></pre>
+
+<pre class="docs-shell-in"><code>./configure --enable-readline</code></pre>
+
+<pre class="docs-shell-in"><code>make</code></pre>
+
+<pre class="docs-shell-in"><code>sudo make install</code></pre>
+
+<pre class="docs-shell-in"><code>make distclean</code></pre>
+</p></li>
+
+<li><p>(Optional) Configure MacPorts to use port information from Git</p>
+
+<p>This step is useful if you want to do port development. Check out the ports tree from git:
+<pre class="docs-shell-in"><code>cd /opt/mports</code></pre>
+
+<pre class="docs-shell-in"><code>git clone https://github.com/macports/macports-ports.git</code></pre>
+</p>
+
+<p>Then open <code class="docs-path">/opt/local/etc/macports/sources.conf</code> in a text editor. The last line should look like this:<br />
+<pre class="docs-shell-in"><code>rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default]</code></pre>
+</p>
+
+<p>Change it to point to the working copy you checked out:
+<pre class="docs-shell-in"><code>file:///opt/mports/macports-ports [default]</code></pre>
+</p></li>
+
+<li><p>Environment</p>
+
+<p>You should setup your PATH and other environment options according to <a href="https://guide.macports.org/#installing.shell">Section 2.5, “MacPorts and the Shell”</a>.</p></li>
+</ol>
+
+
+    </div>
+  </main>
+
+
+  <footer>
+  <div class="container">
+
+    <section class="links">
+      <a href="https://github.com/macports/">Git Repository</a>
+      <a href="https://trac.macports.org/wiki">MacPorts Wiki</a>
+      <a href="https://trac.macports.org/wiki/MacPortsDevelopers">MacPorts Team</a>
+    </section>
+    <section>
+      <div class="legal-copyright">
+        Copyright © 2002–2019 <a href="https://www.macports.org/">The MacPorts Project</a>. All rights reserved.
+      </div>
+
+      <div class="link">
+        Content delivery accelerated by <a href="https://www.stackpath.com/">StackPath</a>.
+      </div>
+    </section>
+  </div>
+</footer>
+
+
+
+  </body>
+</html>

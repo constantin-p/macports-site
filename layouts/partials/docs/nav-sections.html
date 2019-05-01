@@ -1,0 +1,14 @@
+<ul class="nav-sections">
+  
+  {{ $sections := union .Sections .Pages }}
+  {{ range $sections.ByWeight }}
+
+    {{ $idPath := strings.TrimSuffix "/" (strings.TrimPrefix "/" (strings.TrimPrefix "/docs/" .RelPermalink )) }}
+    {{ $id := replace $idPath "/" "." }}
+
+    <li>
+      <a href="#{{$id}}">{{ .Title }}</a>
+    </li>
+  {{ end }}
+
+</ul>

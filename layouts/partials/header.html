@@ -1,0 +1,38 @@
+{{ $docsPage := (hasPrefix .RelPermalink "/docs/") }}
+<header class="{{if $docsPage}}dark{{end}}">
+  <nav class="container">
+
+    <a class="brand" href="/" title="The MacPorts Project">
+      {{if $docsPage}}
+        <img src="/assets/logo-inverse.svg" height="22" alt="Mac Ports">
+      {{else}}
+        <img src="/assets/logo.svg" height="22" alt="Mac Ports">
+      {{end}}
+    </a>
+
+    <label for="menu-toggle">Menu</label>
+    <input type="checkbox" id="menu-toggle">
+    <ul>
+      {{ $current := . }}
+      {{ range .Site.Menus.main }}
+        {{ $topLevel := replace .URL "/" "" }}
+        <li class="{{ if .HasChildren }}has-sublist {{ end }}{{ if not $current.IsHome }}{{ if or (eq $current.RelPermalink .URL) (eq $current.Type $topLevel) }}active{{ end }}{{ end }}">
+          {{ if .HasChildren }}
+            <a role="button" tabindex="0">{{ .Name }}</a>
+            <div class="sublist">
+              <ul class="container">
+                {{ range .Children }}
+                  <li class="{{ if not $current.IsHome }}{{ if and (eq $current.RelPermalink .URL) (eq $current.Type $topLevel) }}active{{ end }}{{ end }}">
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
+          {{ else }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ end  }}
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

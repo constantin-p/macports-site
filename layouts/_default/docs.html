@@ -1,0 +1,23 @@
+{{ define "body" }}
+
+  {{ partial "header.html" . }}
+
+
+  <main>
+    <div class="container">
+      <div class="columns">
+        <nav class="sidebar">
+          {{ partial "docs/nav-chapters.html" . }}
+        </nav>
+
+        <div class="content">
+          {{ partial "docs/chapters.html" . }}
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  {{ partial "footer.html" . }}
+
+{{ end }}

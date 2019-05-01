@@ -1,0 +1,16 @@
+{{ define "body" }}
+
+  {{ partial "header.html" . }}
+
+
+  <main>
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      {{ partial "process-headlines.html" .Content }}
+    </div>
+  </main>
+
+
+  {{ partial "footer.html" . }}
+
+{{ end }}

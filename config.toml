@@ -1,0 +1,57 @@
+baseURL = "https://www.macports.org/"
+languageCode = "en-us"
+title = "The MacPorts Project"
+copyright = "Copyright © 2002–2019 [The MacPorts Project](https://www.macports.org/). All rights reserved."
+
+[params]
+  dateFormat = "Jan 2, 2006"
+  
+# Main Menu
+[menu]
+  [[menu.main]]
+    name = "Getting Started"
+    url = "/getting-started/"
+    weight = 10
+  [[menu.main]]
+    name = "Documentation"
+    url = "/docs/"
+    weight = 20
+  [[menu.main]]
+    name = "Available ports"
+    url = "https://www.macports.org/ports.php"
+    weight = 30
+  [[menu.main]]
+    name = "Downloads"
+    url = "https://github.com/macports/macports-base/releases/tag/v2.5.4"
+    weight = 40
+  [[menu.main]]
+    name = "Support"
+    identifier = "support"
+    url = "/support/"
+    weight = 50
+  [[menu.main]]
+    name = "Bug Reporting"
+    parent = "support"
+    url = "https://guide.macports.org/#project.tickets"
+    weight = 51
+  [[menu.main]]
+    name = "Contact Us"
+    parent = "support"
+    url = "/support/contact-us/"
+    weight = 52
+  [[menu.main]]
+    name = "Team"
+    parent = "support"
+    url = "https://trac.macports.org/wiki/MacPortsDevelopers"
+    weight = 53
+  [[menu.main]]
+    name = "FAQ"
+    parent = "support"
+    url = "https://trac.macports.org/wiki/FAQ"
+    weight = 54
+  [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 60
+
+[taxonomies]
