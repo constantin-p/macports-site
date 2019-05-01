@@ -519,7 +519,7 @@ a:hover {
   .inline.at-sign {
     position: relative;
     display: inline-block;
-    background: url('/assets/at-sign.svg');
+    background: url('../assets/at-sign.svg');
     background-size: 1.6rem;
     background-repeat: no-repeat;
     width: 1.6rem;
