@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MacPorts and the Shell on The MacPorts Project</title>
+    <link>https://constantin-p.github.io/macports-site/docs/installing/shell/</link>
+    <description>Recent content in MacPorts and the Shell on The MacPorts Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2002–2019 [The MacPorts Project](https://www.macports.org/). All rights reserved.</copyright>
+    
+	<atom:link href="https://constantin-p.github.io/macports-site/docs/installing/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Postflight Script</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/shell/postflight/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/shell/postflight/</guid>
+      <description>The postflight script automatically sets the PATH variable, and optionally the MANPATH and DISPLAY variables according to the rules described below. If a current shell configuration file exists at installation time it is renamed to “mpsaved_$timestamp”. Those installing MacPorts from source code must modify their environment manually using the rules as a guide.
+ Required: PATH variable
+This variable is set by the postflight script to prepend the MacPorts executable paths to the current path as shown.</description>
+    </item>
+    
+    <item>
+      <title>Verify the Configuration File</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/shell/verifyprofile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/shell/verifyprofile/</guid>
+      <description>To verify that the file containing the MacPorts variables is in effect, type env in the terminal to verify the current environment settings after the file has been created. Example output for env is shown below.
+ Changes to shell configuration files do not take effect until a new terminal session is opened.
+ MANPATH= TERM_PROGRAM=Apple_Terminal TERM=xterm-color SHELL=/bin/bash TERM_PROGRAM_VERSION=237 USER=joebob __CF_USER_TEXT_ENCODING=0x1FC:0:0 PATH=/opt/local/bin:/opt/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin PWD=/Users/joebob EDITOR=/usr/bin/pico SHLVL=1 HOME=/Users/joebob LOGNAME=joebob DISPLAY=:0.0 SECURITYSESSIONID=b0cea0 _=/usr/bin/env  </description>
+    </item>
+    
+    <item>
+      <title>Optional Editor Variables</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/shell/editorvar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/shell/editorvar/</guid>
+      <description>You can set an environment variable in order to use your favorite text editor with the port edit command.
+MacPorts will check MP_EDITOR, VISUAL and EDITOR in this order, allowing you to either use a default editor shared with other programs (VISUAL and EDITOR) or a MacPorts-specific one (`MP_EDITOR).
+For example, to use the nano editor, add this line to your bash config:
+export EDITOR=/usr/bin/nano To use the user-friendly GUI editor BBEdit (installation required), add this line:</description>
+    </item>
+    
+  </channel>
+</rss>

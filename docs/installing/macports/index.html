@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Install MacPorts</title>
+
+  
+  <link rel="stylesheet" href="https://constantin-p.github.io/macports-site/css/main.css">
+
+</head>
+  <body>
+
+    
+
+  
+<header class="">
+  <nav class="container">
+
+    <a class="brand" href="/" title="The MacPorts Project">
+      
+        <img src="/assets/logo.svg" height="22" alt="Mac Ports">
+      
+    </a>
+
+    <label for="menu-toggle">Menu</label>
+    <input type="checkbox" id="menu-toggle">
+    <ul>
+      
+      
+        
+        <li class="">
+          
+            <a href="/macports-site/getting-started/">Getting Started</a>
+          
+        </li>
+      
+        
+        <li class="">
+          
+            <a href="/macports-site/docs/">Documentation</a>
+          
+        </li>
+      
+        
+        <li class="">
+          
+            <a href="https://www.macports.org/ports.php">Available ports</a>
+          
+        </li>
+      
+        
+        <li class="">
+          
+            <a href="https://github.com/macports/macports-base/releases/tag/v2.5.4">Downloads</a>
+          
+        </li>
+      
+        
+        <li class="has-sublist ">
+          
+            <a role="button" tabindex="0">Support</a>
+            <div class="sublist">
+              <ul class="container">
+                
+                  <li class="">
+                    <a href="https://guide.macports.org/#project.tickets">Bug Reporting</a>
+                  </li>
+                
+                  <li class="">
+                    <a href="/macports-site/support/contact-us/">Contact Us</a>
+                  </li>
+                
+                  <li class="">
+                    <a href="https://trac.macports.org/wiki/MacPortsDevelopers">Team</a>
+                  </li>
+                
+                  <li class="">
+                    <a href="https://trac.macports.org/wiki/FAQ">FAQ</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+        </li>
+      
+        
+        <li class="">
+          
+            <a href="/macports-site/news/">News</a>
+          
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+
+
+  <main>
+    <div class="container">
+      <div class="columns">
+        <nav class="sidebar">
+          <ul class="nav-chapters">
+
+  
+  
+
+    
+    
+
+    
+      <li>
+        <a href="#macports-site.docs.installing.macports.binary">macOS Package Install</a>
+      </li>
+    
+  
+
+    
+    
+
+    
+      <li>
+        <a href="#macports-site.docs.installing.macports.source">Source Install</a>
+      </li>
+    
+  
+
+    
+    
+
+    
+      <li>
+        <a href="#macports-site.docs.installing.macports.git">Git Install</a>
+      </li>
+    
+  
+
+    
+    
+
+    
+      <li>
+        <a href="#macports-site.docs.installing.macports.source.multiple">Install Multiple MacPorts Copies</a>
+      </li>
+    
+  
+  
+</ul>
+        </nav>
+
+        <div class="content">
+          <div class="doc-chapters">
+
+  
+  
+
+    
+    
+
+    <a href="#macports-site.docs.installing.macports.binary" class="h1">
+      <h1>macOS Package Install</h1>
+      <span class="anchor-target" id="macports-site.docs.installing.macports.binary"></span>
+    </a>
+
+    <p>The macOS package installer automatically installs MacPorts, <a href="https://guide.macports.org/#installing.shell">sets the shell environment</a>, and runs a <a href="https://guide.macports.org/#using.port.selfupdate">selfupdate</a> operation to update the ports tree and MacPorts base with the latest release.</p>
+
+<ol>
+<li><p>Download the latest <code class="docs-path">MacPorts-2.5.4-....pkg</code> installer from the releases <a href="https://github.com/macports/macports-base/releases/">on GitHub</a>. Here are direct links for the latest versions of macOS:</p>
+
+<ul>
+<li><p><strong>macOS 10.14 Mojave:</strong></p>
+
+<p><a href="https://github.com/macports/macports-base/releases/download/v2.5.4/MacPorts-2.5.4-10.14-Mojave.pkg">MacPorts-2.5.4-10.14-Mojave.pkg</a></p></li>
+
+<li><p><strong>macOS 10.13 High Sierra:</strong></p>
+
+<p><a href="https://github.com/macports/macports-base/releases/download/v2.5.4/MacPorts-2.5.4-10.13-HighSierra.pkg">MacPorts-2.5.4-10.13-HighSierra.pkg</a></p></li>
+
+<li><p><strong>macOS 10.12 Sierra:</strong></p>
+
+<p><a href="https://github.com/macports/macports-base/releases/download/v2.5.4/MacPorts-2.5.4-10.12-Sierra.pkg">MacPorts-2.5.4-10.12-Sierra.pkg</a></p></li>
+</ul></li>
+
+<li><p>Double-click the downloaded package installer to perform the default “easy” install.</p></li>
+
+<li><p>After this step you are done already, MacPorts is now installed and your shell environment was set up automatically by the installer. To confirm the installation is working as expected, now try using <code class="docs-command">port</code> in a <em><strong>new</strong></em> terminal window.</p></li>
+</ol>
+
+<p><pre class="docs-shell-in"><code>port version</code></pre>
+
+<pre class="docs-shell-out"><code>Version: 2.5.4</code></pre>
+</p>
+
+<p>In case of problems such as “command not found”, make sure that you opened a new terminal window or consult <a href="https://guide.macports.org/#installing.shell">Section 2.5, “MacPorts and the Shell”</a>. Otherwise, please skip the remainder of this chapter and continue with <a href="https://guide.macports.org/#using">Chapter 3, Using MacPorts</a> in this guide.</p>
+
+    
+  
+
+    
+    
+
+    <a href="#macports-site.docs.installing.macports.source" class="h1">
+      <h1>Source Install</h1>
+      <span class="anchor-target" id="macports-site.docs.installing.macports.source"></span>
+    </a>
+
+    <p>If you installed MacPorts using the package installer, skip this section. To install MacPorts from the source code, follow the steps below.</p>
+
+<ol>
+<li>Download and extract the <a href="https://distfiles.macports.org/MacPorts/MacPorts-2.5.4.tar.bz2">MacPorts 2.5.4 tarball</a>. Either do so using your browser and the Finder, or use the given commands in a terminal window.
+<pre class="docs-shell-in"><code>curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.5.4.tar.bz2</code></pre>
+
+<pre class="docs-shell-in"><code>tar xf MacPorts-2.5.4.tar.bz2</code></pre>
+</li>
+<li>Afterwards, perform the commands shown in the terminal window. If you wish to use a path other than <code class="docs-path">/opt/local</code>, follow the instructions for <a href="https://guide.macports.org/#installing.macports.source.multiple">installing multiple copies of MacPorts</a> instead.
+<pre class="docs-shell-in"><code>cd MacPorts-2.5.4/</code></pre>
+
+<pre class="docs-shell-in"><code>./configure</code></pre>
+
+<pre class="docs-shell-in"><code>make</code></pre>
+
+<pre class="docs-shell-in"><code>sudo make install</code></pre>
+</li>
+<li>Please continue with <a href="https://guide.macports.org/#installing.shell">Section 2.5, “MacPorts and the Shell”</a> to set up your shell environment.</li>
+</ol>
+
+    
+  
+
+    
+    
+
+    <a href="#macports-site.docs.installing.macports.git" class="h1">
+      <h1>Git Install</h1>
+      <span class="anchor-target" id="macports-site.docs.installing.macports.git"></span>
+    </a>
+
+    <p>If you installed MacPorts using the package installer, skip this section.</p>
+
+<p>There are times when some may want to run MacPorts from a version newer than the current stable release. Maybe there&rsquo;s a new feature that you&rsquo;d like to use, or it fixes an issue you&rsquo;ve encountered, or you just like to be on the cutting edge. These steps explain how to setup MacPorts for developers, using only Git to keep MacPorts up to date.</p>
+
+<p>Though a distinction is made between pre-release and release versions of MacPorts base, the ports collection supports no such distinction or versioning. The <a href="https://guide.macports.org/#using.port.selfupdate">selfupdate</a> command installs the latest ports tree, and updates MacPorts base to the latest released version.</p>
+
+<ol>
+<li><p>Check out MacPorts source</p>
+
+<p>Pick a location to store a working copy of the MacPorts code. For this example, <code class="docs-path">/opt/mports</code> will be used, but you can put the source anywhere. This example will create <code class="docs-path">/opt/mports/macports-base</code> containing everything needed for MacPorts.
+<pre class="docs-shell-in"><code>mkdir -p /opt/mports</code></pre>
+
+<pre class="docs-shell-in"><code>cd /opt/mports</code></pre>
+
+<pre class="docs-shell-in"><code>git clone https://github.com/macports/macports-base.git</code></pre>
+
+<pre class="docs-shell-in"><code>git checkout v2.5.4  # skip this if you want to use the development version</code></pre>
+</p></li>
+
+<li><p>Build and Install MacPorts</p>
+
+<p>MacPorts uses autoconf and makefiles for installation. These commands will build and install MacPorts to <code class="docs-path">/opt/local</code>. You can add <code class="docs-option">--prefix</code> to <code class="docs-path">./configure</code> to relocate MacPorts to another directory if needed.
+<pre class="docs-shell-in"><code>cd /opt/mports/macports-base</code></pre>
+
+<pre class="docs-shell-in"><code>./configure --enable-readline</code></pre>
+
+<pre class="docs-shell-in"><code>make</code></pre>
+
+<pre class="docs-shell-in"><code>sudo make install</code></pre>
+
+<pre class="docs-shell-in"><code>make distclean</code></pre>
+</p></li>
+
+<li><p>(Optional) Configure MacPorts to use port information from Git</p>
+
+<p>This step is useful if you want to do port development. Check out the ports tree from git:
+<pre class="docs-shell-in"><code>cd /opt/mports</code></pre>
+
+<pre class="docs-shell-in"><code>git clone https://github.com/macports/macports-ports.git</code></pre>
+</p>
+
+<p>Then open <code class="docs-path">/opt/local/etc/macports/sources.conf</code> in a text editor. The last line should look like this:<br />
+<pre class="docs-shell-in"><code>rsync://rsync.macports.org/macports/release/tarballs/ports.tar [default]</code></pre>
+</p>
+
+<p>Change it to point to the working copy you checked out:
+<pre class="docs-shell-in"><code>file:///opt/mports/macports-ports [default]</code></pre>
+</p></li>
+
+<li><p>Environment</p>
+
+<p>You should setup your PATH and other environment options according to <a href="https://guide.macports.org/#installing.shell">Section 2.5, “MacPorts and the Shell”</a>.</p></li>
+</ol>
+
+    
+  
+
+    
+    
+
+    <a href="#macports-site.docs.installing.macports.source.multiple" class="h1">
+      <h1>Install Multiple MacPorts Copies</h1>
+      <span class="anchor-target" id="macports-site.docs.installing.macports.source.multiple"></span>
+    </a>
+
+    <p>Occasionally a MacPorts developer may wish to install more than one MacPorts instance on the same host. Only one copy of MacPorts may use the default prefix <code class="docs-path">/opt/local</code>, so for additional installations use the option <code class="docs-option">--prefix</code> as shown below. It&rsquo;s also recommended to change the applications dir using &ndash;with-applications-dir to avoid conflicts in <code class="docs-path">/Applications/MacPorts</code>. Use <code class="docs-option">--without-startupitems</code> to automatically set <code class="docs-option">startupitem_install</code> no in the new <code class="docs-path">macports.conf</code>, which is required to avoid conflicts in <code class="docs-path">/Library/LaunchAgents</code> or <code class="docs-path">/Library/LaunchDaemons</code>.</p>
+
+<blockquote>
+<p>The first command temporarily removes the standard MacPorts binary paths because they must not be present while installing a second instance.</p>
+</blockquote>
+
+<p><pre class="docs-shell-in"><code>export PATH=/bin:/sbin:/usr/bin:/usr/sbin</code></pre>
+
+<pre class="docs-shell-in"><code>MP_PREFIX=/opt/macports-test</code></pre>
+
+<pre class="docs-shell-in"><code>./configure --prefix=$MP_PREFIX --with-applications-dir=$MP_PREFIX/Applications --without-startupitems</code></pre>
+
+<pre class="docs-shell-in"><code>make</code></pre>
+
+<pre class="docs-shell-in"><code>sudo make install</code></pre>
+</p>
+
+    
+  
+
+</div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <footer>
+  <div class="container">
+
+    <section class="links">
+      <a href="https://github.com/macports/">Git Repository</a>
+      <a href="https://trac.macports.org/wiki">MacPorts Wiki</a>
+      <a href="https://trac.macports.org/wiki/MacPortsDevelopers">MacPorts Team</a>
+    </section>
+    <section>
+      <div class="legal-copyright">
+        Copyright © 2002–2019 <a href="https://www.macports.org/">The MacPorts Project</a>. All rights reserved.
+      </div>
+
+      <div class="link">
+        Content delivery accelerated by <a href="https://www.stackpath.com/">StackPath</a>.
+      </div>
+    </section>
+  </div>
+</footer>
+
+
+
+  </body>
+</html>

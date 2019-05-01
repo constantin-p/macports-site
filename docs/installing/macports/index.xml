@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install MacPorts on The MacPorts Project</title>
+    <link>https://constantin-p.github.io/macports-site/docs/installing/macports/</link>
+    <description>Recent content in Install MacPorts on The MacPorts Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2002–2019 [The MacPorts Project](https://www.macports.org/). All rights reserved.</copyright>
+    
+	<atom:link href="https://constantin-p.github.io/macports-site/docs/installing/macports/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>macOS Package Install</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/macports/binary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/macports/binary/</guid>
+      <description>The macOS package installer automatically installs MacPorts, sets the shell environment, and runs a selfupdate operation to update the ports tree and MacPorts base with the latest release.
+ Download the latest MacPorts-2.5.4-....pkg installer from the releases on GitHub. Here are direct links for the latest versions of macOS:
+ macOS 10.14 Mojave:
+MacPorts-2.5.4-10.14-Mojave.pkg
+ macOS 10.13 High Sierra:
+MacPorts-2.5.4-10.13-HighSierra.pkg
+ macOS 10.12 Sierra:
+MacPorts-2.5.4-10.12-Sierra.pkg
+  Double-click the downloaded package installer to perform the default “easy” install.</description>
+    </item>
+    
+    <item>
+      <title>Source Install</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/macports/source/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/macports/source/</guid>
+      <description>If you installed MacPorts using the package installer, skip this section. To install MacPorts from the source code, follow the steps below.
+ Download and extract the MacPorts 2.5.4 tarball. Either do so using your browser and the Finder, or use the given commands in a terminal window. curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.5.4.tar.bz2 tar xf MacPorts-2.5.4.tar.bz2  Afterwards, perform the commands shown in the terminal window. If you wish to use a path other than /opt/local, follow the instructions for installing multiple copies of MacPorts instead.</description>
+    </item>
+    
+    <item>
+      <title>Git Install</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/macports/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/macports/git/</guid>
+      <description>If you installed MacPorts using the package installer, skip this section.
+There are times when some may want to run MacPorts from a version newer than the current stable release. Maybe there&amp;rsquo;s a new feature that you&amp;rsquo;d like to use, or it fixes an issue you&amp;rsquo;ve encountered, or you just like to be on the cutting edge. These steps explain how to setup MacPorts for developers, using only Git to keep MacPorts up to date.</description>
+    </item>
+    
+    <item>
+      <title>Install Multiple MacPorts Copies</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/macports/source.multiple/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/macports/source.multiple/</guid>
+      <description>Occasionally a MacPorts developer may wish to install more than one MacPorts instance on the same host. Only one copy of MacPorts may use the default prefix /opt/local, so for additional installations use the option --prefix as shown below. It&amp;rsquo;s also recommended to change the applications dir using &amp;ndash;with-applications-dir to avoid conflicts in /Applications/MacPorts. Use --without-startupitems to automatically set startupitem_install no in the new macports.conf, which is required to avoid conflicts in /Library/LaunchAgents or /Library/LaunchDaemons.</description>
+    </item>
+    
+  </channel>
+</rss>

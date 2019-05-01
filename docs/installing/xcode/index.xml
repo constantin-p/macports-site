@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install Xcode on The MacPorts Project</title>
+    <link>https://constantin-p.github.io/macports-site/docs/installing/xcode/</link>
+    <description>Recent content in Install Xcode on The MacPorts Project</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2002–2019 [The MacPorts Project](https://www.macports.org/). All rights reserved.</copyright>
+    
+	<atom:link href="https://constantin-p.github.io/macports-site/docs/installing/xcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install Xcode on OS X 10.9 or Later</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/xcode/mavericks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/xcode/mavericks/</guid>
+      <description>Download the latest version of Xcode from the Apple developer website or get it using the Mac App Store.
+Once you have Xcode installed, open a terminal, run xcode-select --install, and click the Install button to install the required command line developer tools. Don&amp;rsquo;t worry if you see a message telling you the software cannot be installed because it is not currently available from the Software Update Server. This usually means you already have the latest version installed.</description>
+    </item>
+    
+    <item>
+      <title>Install Xcode on OS X 10.7 Lion or OS X 10.8 Mountain Lion</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/xcode/lion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/xcode/lion/</guid>
+      <description>Download the latest version of Xcode from the Apple developer website or get it using the Mac App Store.
+Xcode 4.3 and later do not automatically install the command line tools, but MacPorts requires them. To install them, open the Xcode application, go to the Preferences window, to the Downloads section, and click the Install button next to Command Line Tools. Be sure to return to this window after every Xcode upgrade to ensure that the command line tools are also upgraded.</description>
+    </item>
+    
+    <item>
+      <title>Install Xcode on Mac OS X 10.6 Snow Leopard</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/xcode/snowleopard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/xcode/snowleopard/</guid>
+      <description>If you are using Mac OS X 10.6, there are two branches of Xcode which could be considered to be the latest, 3.2.x and 4.x. Xcode 4 costs money, but Xcode 3 is still available free of charge. There are two options for downloading it:
+ Xcode 3.2 - smaller download, but you will need to run Software Update after installing to get the latest version. Note that Apple might at some point discontinue providing these updates via their update servers.</description>
+    </item>
+    
+    <item>
+      <title>Install Xcode on Older Releases of Mac OS X</title>
+      <link>https://constantin-p.github.io/macports-site/docs/installing/xcode/other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://constantin-p.github.io/macports-site/docs/installing/xcode/other/</guid>
+      <description>If you have an earlier release of Mac OS X, you may download the latest version of Xcode for Mac OS X 10.5 (Xcode 3.0 and Xcode 3.1 Developer Tools) or 10.4 (Xcode 2.4.1 and Xcode 2.5 Developer Tools) from the Apple developer website.
+Ensure that those of the following options that are available in the installer for your version of Xcode are selected:
+ UNIX Development System Tools X11 SDK Command Line Support  </description>
+    </item>
+    
+  </channel>
+</rss>
