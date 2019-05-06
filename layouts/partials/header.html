@@ -17,15 +17,15 @@
     <input type="checkbox" id="menu-toggle">
     <ul>
       {{ $current := . }}
+      {{ $currentTopLevel := (printf "%s%s/" (urls.Parse $.Site.BaseURL).Path $current.Type) }}
       {{ range .Site.Menus.main }}
-        {{ $topLevel := replace .URL "/" "" }}
-        <li class="{{ if .HasChildren }}has-sublist {{ end }}{{ if not $current.IsHome }}{{ if or (eq $current.RelPermalink .URL) (eq $current.Type $topLevel) }}active{{ end }}{{ end }}">
+        <li class="{{ if .HasChildren }}has-sublist {{ end }}{{ if not $current.IsHome }}{{ if or (eq $current.RelPermalink .URL) (eq $currentTopLevel .URL) }}active{{ end }}{{ end }}">
           {{ if .HasChildren }}
             <a role="button" tabindex="0">{{ .Name }}</a>
             <div class="sublist">
               <ul class="container">
                 {{ range .Children }}
-                  <li class="{{ if not $current.IsHome }}{{ if and (eq $current.RelPermalink .URL) (eq $current.Type $topLevel) }}active{{ end }}{{ end }}">
+                  <li class="{{ if not $current.IsHome }}{{ if and (eq $current.RelPermalink .URL) (eq $current.URL .URL) }}active{{ end }}{{ end }}">
                     <a href="{{ .URL }}">{{ .Name }}</a>
                   </li>
                 {{ end }}
