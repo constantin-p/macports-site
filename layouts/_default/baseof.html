@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   {{ partial "head.html" . }}
-  <body>
 
+  <body class="{{if .IsHome}}home{{end}}">
+    
     {{ block "body" . }}{{ end }}
 
   </body>

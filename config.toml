@@ -9,10 +9,6 @@ copyright = "Copyright © 2002–2019 [The MacPorts Project](https://www.macport
 # Main Menu
 [menu]
   [[menu.main]]
-    name = "Getting Started"
-    url = "/getting-started/"
-    weight = 10
-  [[menu.main]]
     name = "Documentation"
     url = "/docs/"
     weight = 20
@@ -20,10 +16,6 @@ copyright = "Copyright © 2002–2019 [The MacPorts Project](https://www.macport
     name = "Available ports"
     url = "https://www.macports.org/ports.php"
     weight = 30
-  [[menu.main]]
-    name = "Downloads"
-    url = "https://github.com/macports/macports-base/releases/tag/v2.5.4"
-    weight = 40
   [[menu.main]]
     name = "Support"
     identifier = "support"

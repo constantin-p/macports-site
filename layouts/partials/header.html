@@ -2,11 +2,12 @@
 
 {{ $docsBaseURLPath := (printf "%sdocs/" (urls.Parse .Site.BaseURL).Path) }}
 {{ $docsPage := (hasPrefix .RelPermalink $docsBaseURLPath) }}
-<header class="{{if $docsPage}}dark{{end}}">
+{{ $inverse := $docsPage }}
+<header class="{{if $inverse}}dark{{end}}">
   <nav class="container">
 
     <a class="brand" href="{{.Site.BaseURL}}" title="The MacPorts Project">
-      {{if $docsPage}}
+      {{if $inverse}}
         <img src="{{.Site.BaseURL}}assets/logo-inverse.svg" height="22" alt="Mac Ports">
       {{else}}
         <img src="{{.Site.BaseURL}}assets/logo.svg" height="22" alt="Mac Ports">

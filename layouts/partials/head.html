@@ -6,6 +6,7 @@
   <title>{{ .Title }}</title>
 
   {{ $css := "css/main.css" | absURL }}
+  {{ $cssHome := "css/homepage.css" | absURL }}
+  <link rel="stylesheet" href="{{ $cssHome }}">
   <link rel="stylesheet" href="{{ $css }}">
-
 </head>

@@ -539,6 +539,38 @@ a:hover {
     overflow: hidden;
   }
 
+  /* download symbol */
+  .inline.download {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .inline.download::after {
+    content: '';
+    position: relative;
+    margin-left: .4rem;
+    display: inline-block;
+    background: url('../assets/download.svg');
+    background-size: 1.6rem;
+    background-repeat: no-repeat;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    vertical-align: middle;
+    line-height: 1.6rem;
+    fill: red;
+  }
+
+  .inline.download > span {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
 
 /* DOCS */
   /* command SHORTCODE */
@@ -652,7 +684,7 @@ a:hover {
   header nav > ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-grow: 1;
     margin: 0 0 0 4%;
   }
@@ -741,6 +773,55 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
   }
+
+
+
+  /* HOMEPAGE */
+  section.home-intro h1 {
+    font-size: 24px;
+    line-height: 1.16667;
+    letter-spacing: .009em;
+  }
+
+  section.home-intro h2 {
+    font-size: 48px;
+    line-height: 1.08365;
+    letter-spacing: -.003em;
+  }
+
+  section.home-intro h3 {
+    font-size: 21px;
+    line-height: 1.38105;
+    letter-spacing: .011em;
+  }
+
+  section.home-intro h3 + p > a {
+    padding: 0 2rem;
+    height: 4.6rem;
+    border-radius: 4.6rem;
+  }
+
+  section.home-intro h3 + p {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 4.8rem;
+    padding-bottom: 8rem;
+  }
+
+  section.home-intro h3 + p > a:not(:last-child) {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  section.home-section > .container {
+    flex-direction: row;
+  }
+
+  section.home-section > .container > .section-title {
+    font-size: 24px;
+    line-height: 1.16667;
+    letter-spacing: .009em;
+  }
 }
 
 /* >= 992px */
@@ -754,5 +835,18 @@ a:hover {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+
+  /* HOMEPAGE */
+  section.home-intro h1 {
+    font-size: 32px;
+    line-height: 1.125;
+    letter-spacing: .004em;
+  }
+
+  section.home-intro h2 {
+    font-size: 64px;
+    line-height: 1.0625;
+    letter-spacing: -.009em;
   }
 }

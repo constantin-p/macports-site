@@ -1,0 +1,7 @@
+{{ $sectionID := .Get "id" }}
+<section class="home-section" id="{{ $sectionID }}">
+  <div class="container">
+    <div class="section-title">{{ .Get "title" }}</div>
+    <div class="section-content">{{ .Inner | markdownify }}</div>
+  </div>
+</section>
